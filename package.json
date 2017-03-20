@@ -1,0 +1,53 @@
+{
+	"name":        "rw-body",
+	"version":     "0.0.0",
+	"description": "A ravenwood middleware to read request bodies",
+	"author":      "Pierre-Nicolas Clauss",
+	"license":     "WTFPL",
+	"homepage":    "https://github.com/pinicarus/rw-body#readme",
+	"private":     true,
+
+	"keywords": [
+		"ravenwood",
+		"middleware",
+		"body"
+	],
+
+	"repository": {
+		"type": "git",
+		"url":  "git+https://github.com/pinicarus/rw-body.git"
+	},
+
+	"bugs": {
+		"url": "https://github.com/pinicarus/rw-body/issues"
+	},
+
+	"scripts": {
+		"doc":         "jsdoc2md --heading-depth 1 --files src/**.js > API.md",
+		"lint":        "eslint . --ignore-path .gitignore",
+		"unittest":    "mocha --opts ./.mocha.opts",
+		"unitcov":     "istanbul cover -- _mocha --opts ./.mocha.opts",
+		"postunitcov": "istanbul check-coverage",
+		"pretest":     "npm run lint",
+		"test":        "npm run unitcov",
+		"posttest":    "cat coverage/lcov.info | coveralls || true"
+	},
+
+	"dependencies": {
+		"bluebird":  "3.5.0",
+		"facies":    "2.0.2",
+		"ravenwood": "2.0.0"
+	},
+
+	"devDependencies": {
+		"coveralls":         "2.12.0",
+		"eslint":            "3.18.0",
+		"istanbul":          "0.4.5",
+		"jsdoc-to-markdown": "3.0.0",
+		"mocha":             "3.2.0"
+	},
+
+	"peerDependencies": {
+		"ravenwood": "2.x"
+	}
+}
