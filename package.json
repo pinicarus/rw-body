@@ -1,11 +1,10 @@
 {
 	"name":        "rw-body",
-	"version":     "0.0.0",
+	"version":     "2.0.0",
 	"description": "A ravenwood middleware to read request bodies",
 	"author":      "Pierre-Nicolas Clauss",
 	"license":     "WTFPL",
 	"homepage":    "https://github.com/pinicarus/rw-body#readme",
-	"private":     true,
 
 	"keywords": [
 		"ravenwood",
